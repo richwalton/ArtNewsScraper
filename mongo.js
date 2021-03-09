@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-// const MONGODB_URI = 'mongodb+srv://richwalton:Z7QpJbEqnRS5ib3D@cluster0.dyuho.mongodb.net/art_news_database?retryWrites=true&w=majority';
+
 require('dotenv').config()
 const port = process.env.PORT || 3000;
 app.listen(port);
