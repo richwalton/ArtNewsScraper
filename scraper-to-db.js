@@ -139,7 +139,7 @@ function scrape () {
         }
     })
 }
-cron.schedule('0 */8 * * * ', () => {     // <----- cron - run 3 times a day **** ###
+cron.schedule('4 * * * * ', () => {     // '0 */8 * * * ' <----- cron - run 3 times a day **** ###
 scrape().then(function(value) { 
     let artColArray = value; 
     let artNewsPa = artColArray.artNP;
