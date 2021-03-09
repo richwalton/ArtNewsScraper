@@ -1,1 +1,1 @@
-web: node scraper-to-db.js
+web: node start
