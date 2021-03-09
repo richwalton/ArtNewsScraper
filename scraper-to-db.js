@@ -139,7 +139,7 @@ function scrape () {
         }
     })
 }
-cron.schedule('40 * * * * ', () => {     // '0 */8 * * * ' <----- cron - run 3 times a day **** ###
+// cron.schedule('40 * * * * ', () => {     // '0 */8 * * * ' <----- cron - run 3 times a day **** ###
 scrape().then(function(value) { 
     let artColArray = value; 
     let artNewsPa = artColArray.artNP;
@@ -151,7 +151,7 @@ scrape().then(function(value) {
     
     addToMongoDB(artNewsPa, artNews, artNet, hyperA, artsy, artForum);
   }).catch(console.error);
-});    // <----- cron **** ### 
+// });    // <----- cron **** ### 
 
   const addToMongoDB = async (artNewsPa, artNews, artNet, hyperA, artsy, artForum) => {
     await mongo().then(async (mongoose) => {
