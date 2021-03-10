@@ -1,7 +1,5 @@
 // ******** ------- Scrap Data from Art World News Sites and send to database ------- ********
 let cron = require('node-cron');
-const port = process.env.PORT || 3000;
-scraperToDB.listen(port);
 
 //*** ---------- Connections to mongo server and schema file ----------- * 
 const mongo = require('./mongo');
