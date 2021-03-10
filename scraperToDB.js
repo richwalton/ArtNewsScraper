@@ -18,7 +18,10 @@ const artForUrl ='https://www.artforum.com/news';
 function scrape () {
     return new Promise(async (resolve, reject) => {
         try {
-            const browser = await puppeteer.launch();
+            const browser = await puppeteer.launch({
+                headless: true,
+                args: ["--no-sandbox"]
+            });
             const page = await browser.newPage();
             // *** --------- The Art Newspaper ------- *
             await page.goto(artNpapUrl);
